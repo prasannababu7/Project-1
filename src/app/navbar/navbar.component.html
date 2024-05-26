@@ -1,0 +1,14 @@
+<mat-toolbar color="primary" id="toolbar" class="custom-toolbar">
+  <mat-toolbar-row>
+    <div id="logo" class="logo">RevHire</div>
+    <span class="example-spacer"></span>
+    
+    <span class="example-spacer"></span>
+    <!-- <button mat-button class="options login" *ngIf="role == null" [routerLink]="['/login']">LogIn</button>
+    <button mat-button class="options login" *ngIf="role == null" [routerLink]="['/signup']">SignUp</button> -->
+    <button mat-button class="options" id="chat-button" *ngIf="role != null" routerLink="/chat">
+      <mat-icon id="chat-icon">chat</mat-icon> Chat
+    </button>
+    <button mat-button class="options logout" id="logout" *ngIf="role != null" (click)="logout()">Logout</button>
+  </mat-toolbar-row>
+</mat-toolbar>

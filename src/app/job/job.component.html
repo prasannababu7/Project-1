@@ -1,0 +1,30 @@
+<mat-card>
+  <img [src]="job.logoLink" alt="Company Logo" style="width: 100px; height: 50px;">
+  <br>
+  <div><b>Company:</b> <i> {{job.companyName}}</i></div>
+  <p><b>Role: </b>{{job.designation}}</p>
+  <p><b>Posted On:</b>{{createdOn | date: 'MMM-dd-yyyy'}}</p>
+  <p><b>Description:</b> {{job.description}}</p>
+<p><b>Location: </b>{{job.location}}</p>
+  <p><b>Skills</b></p>
+  <span *ngFor="let skill of job.skills" >
+    <span id="skills">{{skill}}</span>
+  </span>
+  <mat-expansion-panel *ngIf="role=='EMPLOYER'">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <div>Applications</div>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div itemSize="50" class="example-viewport">
+      <div *ngFor="let application of applications">
+        <a [href]="application.resumeLink" target="_blank">{{application.resumeLink}}</a>
+      </div>
+    </div>
+  </mat-expansion-panel>
+<div id="buttons">
+  <button mat-raised-button  class="job-button" *ngIf="role=='JOBSEEKER'" (click)="openApplicationDialog()">Apply</button>
+  <button mat-raised-button  class="job-button" *ngIf="role=='EMPLOYER'" (click)="deleteJob()">Delete</button>
+  <button mat-raised-button  class="job-button" *ngIf="role=='EMPLOYER'" (click)="openJobUpdateDialog()">Update</button>
+</div>
+</mat-card>

@@ -1,0 +1,229 @@
+/* Variables */
+:root {
+  --primary-color: #3f51b5;
+  --font-family-base: 'Roboto', sans-serif;
+  --border-radius: 4px;
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-family-base);
+  margin: 0;
+  padding: 0;
+}
+
+/* App navbar */
+/* Styles for the app navbar */
+
+.content {
+  background-image: url('src\assets\home-image.webp');
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  padding: 50px; /* Add padding as needed */
+  color: whi; /* Text color */
+  text-align: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+.header {
+  color: #2c3e50; /* Header color */
+  margin-bottom: 20px;
+}
+
+.sub-header {
+  color: #555; /* Subheader color */
+  margin-bottom: 30px;
+}
+
+.feature-list {
+  margin-left: 30vw;
+  text-align: left; /* Align list items to the left */
+  margin-bottom: 30px;
+  color: white; 
+}
+
+.feature-list mat-list-item {
+  color: white; /* List item text color */
+  margin-bottom: 10px;
+}
+
+.cta-button {
+  background-color: #2c3e50; /* Button background color */
+  color: #fff; /* Button text color */
+  font-weight: bold;
+}
+
+.cta-button:hover {
+  background-color: #34495e; /* Button hover background color */
+}
+
+/* Font import */
+@font-face {
+  font-family: 'tenor_sans';
+  src: url('src/assets/tenor_sans/TenorSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#logo {
+  font-family: 'tenor_sans', sans-serif;
+}
+
+/* Styles for the review slider component */
+
+/* Styles for the review slider component */
+
+/* Container for the reviews */
+.reviews-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 2rem 0; /* Add some vertical padding */
+  background-color: transparent; /* Make the container transparent */
+}
+
+/* Slider for the reviews */
+.reviews-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  scroll-behavior: smooth; /* Add smooth scrolling for better UX */
+  background-color: transparent; /* Make the slider transparent */
+}
+
+/* Individual review slide */
+.slide {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 100%;
+  max-width: 600px; /* Adjust the maximum width of each slide */
+  padding: 0 1rem; /* Add some horizontal padding */
+  background-color: transparent; /* Make the slide transparent */
+}
+
+/* Review card */
+.review-card {
+  border-radius: 12px; /* Increase border radius for a softer look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust box shadow for better depth */
+  color: #333333; /* Set text color to a darker shade */
+  background-color: rgba(255, 255, 255, 0.8); /* Set background color to semi-transparent white */
+  padding: 2rem; /* Add some padding inside the card */
+}
+
+/* Review quote */
+.review-card mat-card-content p {
+  margin: 0;
+  font-size: 1.2rem; /* Increase font size for better readability */
+  line-height: 1.6; /* Improve line spacing for better readability */
+}
+
+/* Review author */
+.review-author {
+  margin-top: 1.5rem; /* Increase spacing */
+  display: flex;
+  align-items: center;
+}
+
+.review-author mat-icon {
+  margin-right: 0.5rem;
+  color: #2196f3; /* Set icon color to match the existing design */
+}
+
+/* Slider controls */
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1; /* Ensure controls appear above slides */
+}
+
+/* Previous and Next buttons */
+.prev-btn,
+.next-btn {
+  background-color: rgba(255, 255, 255, 0.8); /* Set button background color to semi-transparent white */
+  color: #2196f3; /* Set button text color to match the existing design */
+  border: none; /* Remove button border */
+  border-radius: 50%; /* Ensure rounded shape */
+  width: 48px; /* Increase button width */
+  height: 48px; /* Increase button height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for better visibility */
+  transition: all 0.3s ease; /* Add a smooth transition for hover effect */
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: rgba(33, 150, 243, 0.8); /* Change button background color on hover */
+  color: #ffffff; /* Change button text color on hover */
+}
+
+/* Icon inside buttons */
+.prev-btn mat-icon,
+.next-btn mat-icon {
+  font-size: 28px; /* Increase icon size */
+}
+.footer-container {
+  background-color: #2c3e50; /* Updated background color */
+  color: #fff; /* Text color */
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Updated font */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left-column, .right-column {
+  width: 50%;
+}
+
+.social-media-links {
+  display: flex;
+  gap: 10px;
+}
+
+.mat-icon {
+  font-size: 24px;
+}
+
+.mat-icon:hover {
+  color: #3498db; /* Hover color */
+}
+
+.mat-link {
+  color:  #a1c3e5;; /* Link color */
+  text-decoration: none;
+}
+
+.mat-link:hover {
+  text-decoration: underline;
+}
+
+.footer-content h3 {
+  margin-bottom: 10px;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+.footer-content .copyright {
+  text-align: center;
+  margin-top: 20px;
+  color: #ccc; /* Copyright color */
+}
+
+
+
+

@@ -1,0 +1,73 @@
+#new-job{
+  margin-right: 2%;
+    margin-top: 2%;
+    background-color:#2c3e50;
+    color: white;
+    width: 100%;
+}
+
+#chat-button{
+    float: right;
+    margin-top: 30%;
+    border: 1% black;
+    background-color:#2c3e50;
+    color: white;
+}
+
+#chat-icon{
+    width: 150%;
+}
+
+.create-job-container {
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px; /* Adjust the spacing as needed */
+}
+
+
+/* Search Bar Container */
+.search-block {
+  background-color: #ffffff;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+  width: 70vw;
+  box-shadow: none;
+  border: 1px black;
+}
+
+/* Search Bar Input Field */
+.search-control {
+  border:none;
+  outline: none;
+  width: 70vw;
+  padding: 8px 16px;
+  font-size: 16px;
+}
+
+/* Search Icon */
+.search-icon {
+  color: #888888;
+}
+
+/* Close Icon */
+.mat-icon-button {
+  color: #888888;
+}
+
+/* Search Bar Active State */
+.search-block.active {
+  width: 100%;
+}
+
+.parent-container {
+  display: flex;
+  align-items: center; /* Vertically center the items */
+  margin-bottom: 2%;
+  padding: 1%;
+}
+
+.create-job-container {
+  margin-left: auto;
+  margin-right: 1%; /* Push the "Post a Job" button to the right */
+}
+

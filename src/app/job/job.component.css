@@ -1,0 +1,94 @@
+/* Job card */
+mat-card {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f0f0; /* Adjusted background color */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif; /* Better font */
+  }
+  
+  mat-card img {
+    width: 100px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 4px; /* Rounded corners for logo */
+    object-fit: cover; /* Ensure logo fits properly */
+  }
+  
+  mat-card div {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  mat-card p {
+    margin-bottom: 10px;
+  }
+  
+  /* Expansion panel header */
+  mat-expansion-panel-header {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  mat-expansion-panel-header mat-panel-title {
+    font-weight: bold;
+    font-size: 18px; /* Increased font size */
+  }
+  
+  mat-expansion-panel-header mat-panel-description {
+    color: #777;
+    font-size: 16px; /* Increased font size */
+  }
+  
+  /* Expansion panel content */
+  mat-expansion-panel-content {
+    padding: 20px;
+    border-top: 1px solid #ccc;
+  }
+  
+  mat-expansion-panel-content p {
+    margin-bottom: 10px;
+    font-size: 16px; /* Increased font size */
+  }
+  
+  mat-expansion-panel-content span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px; /* Increased font size */
+  }
+  
+  mat-expansion-panel-content div {
+    margin-bottom: 10px;
+    font-size: 16px; /* Increased font size */
+  }
+
+  #skills{
+
+    display: inline-block;
+
+
+  }
+
+.job-button{
+    background-color:white;
+    display: inline;
+    float:inline-end;
+    bottom: 5px; /* Adjust as needed */
+    right: 5px; /* Adjust as needed */
+    width: 8%;
+    margin-top: 2%;
+    margin-left: 1%;
+  }
+
+  .job-button:hover{
+    background-color:#2c3e50;
+    color: white;
+  }
+#buttons {
+    position: relative;
+    width: 100%;
+
+
+}
+

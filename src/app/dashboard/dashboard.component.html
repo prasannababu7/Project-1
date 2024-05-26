@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+<div id="wrapper">
+  <div class="parent-container">
+    <div class="eaton mat-typography" style="overflow-x:hidden;" fxFlexFill cdkScrollable>
+      <mat-toolbar class="search-block mat-elevation-z4" [class.active]="toggleSearch">
+        <mat-toolbar-row style="padding: 0 5px;">
+          <button class="search-icon" mat-icon-button disabled>
+            <mat-icon>search</mat-icon>
+          </button>
+          <input class="search-control" type="text" placeholder="Search" [(ngModel)]="searchText" #searchbar>
+          <button mat-icon-button (click)="searchClose()">
+            <mat-icon>close</mat-icon>
+          </button> 
+        </mat-toolbar-row>
+      </mat-toolbar>
+    </div>
+    <div class="create-job-container" *ngIf="role=='EMPLOYER'">
+      <mat-toolbar-row style="padding: 0 5px;">
+      <button mat-raised-button *ngIf="role=='EMPLOYER'" id="new-job" (click)="createJob()">
+        Post a Job
+      </button>
+      </mat-toolbar-row>
+    </div>
+  </div>
+  
+  <div *ngFor="let job of jobs | filter: searchText; let i = index;" id="container">
+    <br>
+    <app-job [job]="job" [index]="i"> </app-job>
+  </div>
+  <mat-list-item *ngIf="(jobs | filter: searchText).length === 0">
+    <mat-icon mat-list-avatar>error</mat-icon>
+    <div mat-line>0 results</div>
+    <div mat-line>No matching Jobs</div>
+  </mat-list-item>
+</div>
+<!-- <button id ="chat-button" mat-icon-button routerLink="/chat" color="primary"> 
+  <mat-icon id="chat-icon">chat</mat-icon> Chat 
+</button> -->
+
+<!-- <button id ="chat-button" mat-icon-button routerLink="/chat" color="primary"> 
+  <mat-icon id="chat-icon">chat</mat-icon> Chat
+</button> -->
+

@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Application</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Link to your resume</mat-label>
+    <input matInput [(ngModel)]="application.resumeLink">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions id="apply-button">
+  <button mat-button (click)="apply()" id="apply">apply</button>
+</div>

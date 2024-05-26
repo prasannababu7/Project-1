@@ -1,0 +1,26 @@
+<div id="container">
+  <form #jobForm="ngForm" (submit)="save()">
+    <mat-form-field class="item">
+      <input matInput placeholder="Company Name" [(ngModel)]="job.companyName" name="company_name" required>
+    </mat-form-field>
+    <mat-form-field class="item">
+      <input matInput type="logo_link" placeholder="Logo Link" [(ngModel)]="job.logoLink" name="logo_link" required>
+    </mat-form-field>
+    <mat-form-field class="item">
+      <input matInput type="designation" placeholder="Designation" [(ngModel)]="job.designation" name="designation" required>
+    </mat-form-field>
+    <mat-form-field class="item">
+      <input matInput type="location" placeholder="Location" [(ngModel)]="job.location" name="location" required>
+    </mat-form-field>
+    <mat-form-field class="item">
+      <textarea matInput placeholder="Description" [(ngModel)]="job.description" name="description" required></textarea>
+    </mat-form-field>
+    <mat-form-field class="item">
+      <input matInput type="skills" placeholder="Skills (Separated by commas)" [(ngModel)]="skills" name="skills" required>
+    </mat-form-field>
+    <div class="button-container">
+      <button id="submit-button" mat-raised-button type="submit" [disabled]="jobForm.form.invalid">Save</button>
+      <button mat-button (click)="close()">Close</button>
+    </div>
+  </form>
+</div>

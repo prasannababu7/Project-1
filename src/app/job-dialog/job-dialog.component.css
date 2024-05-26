@@ -1,0 +1,50 @@
+#container {
+    margin: 0 auto;
+    width: 30vw;
+    max-width: 100%;
+    padding: 20px;
+    font-family: Arial, sans-serif; /* Use a suitable font */
+  }
+  
+  .item {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  .mat-form-field-label {
+    color: #333; /* Adjust label color */
+  }
+  
+  .mat-form-field-underline {
+    display: none; /* Hide the underline */
+  }
+  
+  .mat-input-element {
+    color: #555; /* Adjust input text color */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  button {
+    margin-left: 10px;
+    font-family: Arial, sans-serif; /* Use the same font as the container */
+    background-color: white; /* Primary button color */
+    color: black; /* Text color */
+    padding: 10px 20px; /* Adjust padding */
+    border: none;
+   
+  }
+
+  button:hover{
+    background-color:#2c3e50;
+    color: white;
+   
+  }

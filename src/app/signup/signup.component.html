@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <mat-card id="signup-card">
+      <mat-card-title id="message" *ngIf="isRegistered">{{message}}</mat-card-title>
+      <mat-card-header id="header">
+        <mat-card-title id="title">RevHire</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form #signupForm = ngForm (submit)="onSubmit()">
+          <mat-form-field >
+            <input matInput class="item" placeholder="First Name" [(ngModel)]="formData.firstName" name="firstName" required>
+          </mat-form-field>
+          <mat-form-field  >
+            <input matInput class="item" placeholder="Last Name" [(ngModel)]="formData.lastName" name="lastName" required>
+          </mat-form-field>
+      
+          <mat-form-field >
+            <input matInput class="item" placeholder="Email" [(ngModel)]="formData.email" name="email" required>
+          </mat-form-field>
+          <mat-form-field >
+            <input matInput type="password" class="item" placeholder="Password" [(ngModel)]="formData.password" name="password" required>
+          </mat-form-field>
+          <mat-form-field class="item">
+            <mat-select placeholder="Role" matInput placeholder="Role" [(ngModel)]="formData.role" name="role" required>
+              <mat-option *ngFor="let role of roles" [value]="role">
+                {{ role }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        <br>
+          <button id="submit-button"mat-raised-button color="primary" type="submit" [disabled]="signupForm.form.invalid">Sign up</button>
+          <span id="register">Registered user? Login <a routerLink="/login">here</a></span>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
